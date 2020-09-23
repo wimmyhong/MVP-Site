@@ -1,0 +1,42 @@
+﻿---
+ID: "449672c4-98e2-47b6-b12a-ded0f703e7e1"
+Parent: "16d3ce1d-9807-46b4-82ac-063da319edd0"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Feature/MvpListing/MvpListing
+SharedFields:
+- ID: "037fe404-dd19-4bf7-8e30-4dadf68b27b0"
+  Hint: componentName
+  Value: MvpListing
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/text_align_left.png
+- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
+  Hint: Datasource Template
+  Value: 
+- ID: "b0b15510-b138-470e-8f33-8da2e228aafe"
+  Hint: Rendering Contents Resolver
+  Value: 
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: 
+- ID: "e441abe7-2ca3-4640-ae26-3789967925d7"
+  Hint: Compatible Renderings
+  Value: "{248BDE7D-D010-4D02-95E8-2578A03A2D2D}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200625T081003Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "6782fe1a-b7ff-42b8-96a0-1ecb9b1227ae"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20200923T051214Z

@@ -1,0 +1,26 @@
+﻿---
+ID: "ee9fe381-e9d9-4063-81c4-1fe0ad88c66c"
+Parent: "589763ce-47df-47b7-b257-d00e846078a5"
+Template: "4a5d2c6f-a492-4518-8e92-a3cfcb83fbdd"
+Path: /sitecore/templates/Branches/Project/MvpSite/MvpYear/$name
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200923T043318Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "48c76c83-70c4-4fe7-89f8-5aa8ec1c5120"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20200923T043504Z
+    - ID: "efc0a3c7-6993-47d2-ba85-10b44961916e"
+      Hint: Include in Menu
+      Value: 

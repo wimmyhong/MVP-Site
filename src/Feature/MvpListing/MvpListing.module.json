@@ -1,0 +1,19 @@
+{
+  "namespace": "Feature.MvpListing",
+  "items": {
+    "includes": [
+      {
+        "name": "templates",
+        "path": "/sitecore/templates/Feature/MvpListing",
+        "allowedPushOperations": "createUpdateAndDelete",
+        "scope": "itemAndDescendants"
+      },
+      {
+        "name": "renderings",
+        "path": "/sitecore/layout/Renderings/Feature/MvpListing",
+        "allowedPushOperations": "createUpdateAndDelete",
+        "scope": "itemAndDescendants"
+      }
+    ]
+  }
+}
