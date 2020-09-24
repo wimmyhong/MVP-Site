@@ -1,0 +1,26 @@
+﻿---
+ID: "f795bdc0-4ba5-4388-8a72-9fe6d0182a19"
+Parent: "63ab2984-74fa-408a-894f-8c66f8466edb"
+Template: "52866305-bbf8-4b43-aed0-ae0b8e52e7c5"
+Path: /sitecore/content/MvpSite/Shared Content/MvpCategories/Technology
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200924T050845Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9d0963ce-754e-42db-bb72-35b68dd9031a"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20200924T050845Z
+    - ID: "ed58042a-36af-4723-9717-1af05cc8b4e9"
+      Hint: Name
+      Value: Technology

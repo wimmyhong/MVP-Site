@@ -1,0 +1,41 @@
+﻿---
+ID: "446679eb-44df-44ab-924b-3f1d9b6e4813"
+Parent: "0da2d46f-f85d-49fa-bb8f-f25d70d1cced"
+Template: "1d78b824-d98e-475a-9636-8eb88848065a"
+Path: /sitecore/content/MvpSite/Home/MVPs/2020/Page Components/MvpList
+BranchID: "589763ce-47df-47b7-b257-d00e846078a5"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{A2902471-7F02-43D3-94C3-49E2FE2F7C73}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200924T052038Z
+    - ID: "32b335d7-827b-4ad7-84a7-b1befc95ca1f"
+      Hint: Data
+      Value: "{FD050213-D531-4B05-9962-404493B16EF2}"
+    - ID: "44251c3e-9d9d-4995-a75f-7b2e36cab9d6"
+      Hint: Categories
+      Value: |
+        {617F2755-5890-4FB0-9473-943E26B5D467}
+        {F1B052FF-D010-446D-AC91-E79D197FCFDE}
+        {7AEF124E-A25F-449B-9770-B767C224DB9F}
+        {F795BDC0-4BA5-4388-8A72-9FE6D0182A19}
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f6d3ce55-e9b3-493b-9481-96d624a3464b"
+    - ID: "9e878724-6d0f-4716-804b-f0a5fa79aa1c"
+      Hint: Year
+      Value: 2020
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20200924T052051Z

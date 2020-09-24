@@ -1,15 +1,15 @@
 ﻿---
-ID: "2925c7f4-252d-482e-b096-edd4cb37b9c9"
+ID: "1d78b824-d98e-475a-9636-8eb88848065a"
 Parent: "a1c501b6-8641-4176-ab9e-41d9b9803a88"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Feature/MvpListing/MvpData
+Path: /sitecore/templates/Feature/MvpListing/MvpList
 SharedFields:
 - ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
   Hint: __Base template
   Value: "{1930BBEB-7805-471A-A3BE-4858AC7CF696}"
 - ID: "f7d48a55-2158-4f02-9356-756654404f73"
   Hint: __Standard values
-  Value: "{E68B1327-2B0F-47A5-8121-D497227EEFB8}"
+  Value: "{2AEE6C9A-2396-4BE4-9D8F-65E17D169424}"
 Languages:
 - Language: en
   Versions:
@@ -17,14 +17,14 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20200923T050220Z
+      Value: 20200924T051133Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "d0659c8d-b1d6-4f3f-b9be-00adf544b362"
+      Value: "59c2ec49-6009-4f47-a967-58a26b001509"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20200924T045442Z
+      Value: 20200924T051221Z

@@ -1,0 +1,23 @@
+﻿---
+ID: "a2902471-7f02-43d3-94c3-49e2fe2f7c73"
+Parent: "9aa9b4d6-98e8-49eb-9084-f42e76b57058"
+Template: "1d78b824-d98e-475a-9636-8eb88848065a"
+Path: /sitecore/templates/Branches/Project/MvpSite/MvpYear/$name/Page Components/MvpList
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200924T051704Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3a66300b-5362-4c03-9e26-6a913be3f641"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20200924T051756Z

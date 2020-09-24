@@ -12,13 +12,13 @@ SharedFields:
   Value: Office/32x32/text_align_left.png
 - ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
   Hint: Datasource Template
-  Value: 
+  Value: /sitecore/templates/Feature/MvpListing/MvpList
 - ID: "b0b15510-b138-470e-8f33-8da2e228aafe"
   Hint: Rendering Contents Resolver
   Value: 
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Location
-  Value: 
+  Value: "./Page Components/*[@@templatename='MvpList']"
 - ID: "e441abe7-2ca3-4640-ae26-3789967925d7"
   Hint: Compatible Renderings
   Value: "{248BDE7D-D010-4D02-95E8-2578A03A2D2D}"
@@ -32,11 +32,11 @@ Languages:
       Value: 20200625T081003Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "6782fe1a-b7ff-42b8-96a0-1ecb9b1227ae"
+      Value: "0ff9ac10-2f7b-43c5-9f53-3d0afed14893"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20200923T051214Z
+      Value: 20200924T052320Z

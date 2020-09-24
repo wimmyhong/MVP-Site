@@ -3,6 +3,12 @@ ID: "9aa9b4d6-98e8-49eb-9084-f42e76b57058"
 Parent: "ee9fe381-e9d9-4063-81c4-1fe0ad88c66c"
 Template: "6aec120a-7222-42c6-a8e8-53f9354aef53"
 Path: /sitecore/templates/Branches/Project/MvpSite/MvpYear/$name/Page Components
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {A87A00B1-E6DB-45AB-8B54-636FEC3B5523}
+    {1D78B824-D98E-475A-9636-8EB88848065A}
 Languages:
 - Language: en
   Versions:
@@ -21,11 +27,11 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "fff4545d-41db-438e-9164-0cdb5501b7d6"
+      Value: "8ebdbd9a-310e-4244-ba02-f20f74426041"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20200728T082034Z
+      Value: 20200924T051828Z
