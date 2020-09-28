@@ -1,0 +1,80 @@
+﻿form {
+    margin-top: 20px;
+
+    label {
+        font-family: AvenirNextW05-Regular;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #707070;
+
+        &.consent {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-top: 4px;
+        }
+    }
+
+    input[type=date], input[type=email], input[type=password], input[type=tel], input[type=text], select, textarea {
+        color: #3c3c3c;
+        background-color: #fff;
+        padding: 0 15px;
+        border: 0;
+        border-top: 0px;
+        border-right: 0px;
+        border-bottom: 2px solid #e1e1e1;
+        border-left: 0px;
+        border-radius: 0;
+        outline: 0 solid transparent;
+        box-shadow: 0 0 0 0 transparent;
+
+        &:focus {
+            border: 1px solid transparent;
+            outline: 2px solid #19a5a2;
+            box-shadow: 0 0 8px 0 #19a5a2;
+        }
+    }
+
+    input[type=checkbox], input[type=radio] {
+        border: 1px solid #e1e1e1;
+        background: #fff;
+        border-radius: 0;
+        width: 18px;
+        height: 18px;
+    }
+
+    .form-check-label {
+        margin: 2px auto auto 15px;
+    }
+
+    button[type=submit] {
+        display: inline-block;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: 0;
+        border-radius: 0;
+        font-size: 17px;
+        font-weight: 600;
+        font-family: AvenirNextR, AvenirNextW05-Demi, sans-serif;
+        letter-spacing: 0.5px;
+        min-width: 229px;
+        text-align: center;
+        opacity: 1;
+        transition: opacity 0.3s;
+        padding: 16px 30px 17px;
+        color: #fff;
+        background: #19a5a2;
+        border: 1px solid #19a5a2;
+        box-shadow: none;
+        outline: 0;
+        cursor: pointer;
+
+        &:not([disabled]):hover,
+        &:not([disabled]):hover[type="submit"] {
+            opacity: 0.5;
+            background: #19a5a2;
+            border: 1px solid #19a5a2;
+        }
+    }
+}

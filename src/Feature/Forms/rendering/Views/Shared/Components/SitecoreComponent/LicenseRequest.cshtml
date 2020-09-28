@@ -1,0 +1,62 @@
+﻿@model Mvp.Feature.Forms.Models.LicenseRequest
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<div class="col-12 col-lg-8">
+
+    <form id="license-form" method="post" role="form">
+
+        <div class="messages"></div>
+
+        <div class="form-group row">
+            <label asp-for="Name" class="col-sm-2 col-form-label">Name *</label>
+            <div class="col-sm-10">
+                <input id="form_name" type="text" asp-for="Name" class="form-control" placeholder="Please enter your full name *" required="required" data-error="Name is required.">
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="form_company" class="col-sm-2 col-form-label">Company *</label>
+            <div class="col-sm-10">
+                <input id="form_company" type="text" name="company" class="form-control" placeholder="Please enter your company*" required="required" data-error="Company is required.">
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="form_purpose">Purpose *</label>
+            <textarea id="form_purpose" type="text" name="purpose" class="form-control" rows="5" required="required" data-error="Purpose is required." placeholder="Please let us know for what purposes you would like to use the license. Please list the open source projects you are working on."></textarea>
+            <div class="help-block with-errors"></div>
+        </div>
+
+        <p>Which product you would like to use?</p>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" asp-for="IncludePlatform" />
+            <label class="form-check-label" asp-for="IncludePlatform">Sitecore Platform: including XP and XC</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" asp-for="IncludeTdsRazl" />
+            <label class="form-check-label" asp-for="IncludeTdsRazl">Developer Collection: TDS and Razl</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" asp-for="IncludeFeydra" />
+            <label class="form-check-label" asp-for="IncludeFeydra">Feydra: Front-End Development Tool</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" asp-for="IncludeAvtor" />
+            <label class="form-check-label" asp-for="IncludeAvtor">Avtor: Content Control Tool</label>
+        </div>
+
+        <div class="form-check my-5">
+            <input class="form-check-input" id="form_consent" asp-for="Consent" type="checkbox" required="required" data-error="Your consent is required." />
+            <label class="form-check-label consent" asp-for="Consent">I understand my license to use the software is governed by my MVP Agreement with Sitecore *</label>
+            <div class="help-block with-errors"></div>
+        </div>
+
+        <button class="btn btn-success btn-send" type="submit">
+            Submit your request
+        </button>
+
+    </form>
+</div>

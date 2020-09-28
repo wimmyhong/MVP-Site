@@ -1,0 +1,11 @@
+{
+  "namespace": "Feature.Forms",
+  "items": {
+    "includes": [
+      {
+        "name": "layouts",
+        "path": "/sitecore/layout/Renderings/Feature/Forms"
+      }
+    ]
+  }
+}
