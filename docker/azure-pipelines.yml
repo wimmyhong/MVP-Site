@@ -40,11 +40,11 @@ stages:
     - task: DockerCompose@0
       displayName: "Push Images with Latest Tag"
       inputs:
-        containerregistrytype: 'Azure Container Registry'
-        azureSubscription: '$(AZURE_SUBSCRIPTION)'
-#        containerregistrytype: 'Container Registry'
-#        dockerRegistryEndpoint: 'mvpsitewh'
-        azureContainerRegistry: $(AZURE_CONTAINER_REGISTRY)
+#        containerregistrytype: 'Azure Container Registry'
+#        azureSubscription: '$(AZURE_SUBSCRIPTION)'
+        containerregistrytype: 'Container Registry'
+        dockerRegistryEndpoint: 'mvpsitewh'
+#        azureContainerRegistry: $(AZURE_CONTAINER_REGISTRY)
         dockerComposeFile: '**/docker-compose.yml'
         additionalDockerComposeFiles: 'docker-compose.override.yml'
 #        dockerComposeFileArgs: 'MVP_DOCKER_REGISTRY=mvpsitewh.azurecr.io'
