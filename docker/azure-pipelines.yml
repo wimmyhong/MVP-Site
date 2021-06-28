@@ -31,8 +31,8 @@ stages:
         dockerRegistryEndpoint: 'mvpsitewh'
         dockerComposeFile: '**/docker-compose.yml'
         additionalDockerComposeFiles: 'docker-compose.override.yml'
-#        dockerComposeFileArgs: '$(DOCKER_COMPOSE_ARGS)'
-        dockerComposeFileArgs: 'MVP_DOCKER_REGISTRY=mvpsitewh.azurecr.io'
+        dockerComposeFileArgs: '$(DOCKER_COMPOSE_ARGS)'
+#        dockerComposeFileArgs: 'MVP_DOCKER_REGISTRY=mvpsitewh.azurecr.io'
         qualifyImageNames: false
         action: 'Build services'
         additionalImageTags: '$(Build.BuildNumber)-$(Build.SourceBranchName)'
@@ -47,8 +47,8 @@ stages:
         azureContainerRegistry: $(AZURE_CONTAINER_REGISTRY)
         dockerComposeFile: '**/docker-compose.yml'
         additionalDockerComposeFiles: 'docker-compose.override.yml'
-        dockerComposeFileArgs: 'MVP_DOCKER_REGISTRY=mvpsitewh.azurecr.io'
-#        dockerComposeFileArgs: '$(DOCKER_COMPOSE_ARGS)'
+#        dockerComposeFileArgs: 'MVP_DOCKER_REGISTRY=mvpsitewh.azurecr.io'
+        dockerComposeFileArgs: '$(DOCKER_COMPOSE_ARGS)'
         action: 'Push services'
         additionalImageTags: '$(Build.BuildNumber)-$(Build.SourceBranchName)'
         includeLatestTag: true
