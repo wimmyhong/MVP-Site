@@ -28,11 +28,10 @@ stages:
       displayName: "Build Images"
       inputs:
         containerregistrytype: 'Container Registry'
-        dockerRegistryEndpoint: 'mvpsitewh'
+        dockerRegistryEndpoint: 'mvpsiteacrwh'
         dockerComposeFile: '**/docker-compose.yml'
         additionalDockerComposeFiles: 'docker-compose.override.yml'
         dockerComposeFileArgs: '$(DOCKER_COMPOSE_ARGS)'
-#        dockerComposeFileArgs: 'MVP_DOCKER_REGISTRY=mvpsitewh.azurecr.io'
         qualifyImageNames: false
         action: 'Build services'
         additionalImageTags: '$(Build.BuildNumber)-$(Build.SourceBranchName)'
@@ -43,11 +42,10 @@ stages:
 #        containerregistrytype: 'Azure Container Registry'
 #        azureSubscription: '$(AZURE_SUBSCRIPTION)'
         containerregistrytype: 'Container Registry'
-        dockerRegistryEndpoint: 'mvpsitewh'
+        dockerRegistryEndpoint: 'mvpsiteacrwh'
 #        azureContainerRegistry: $(AZURE_CONTAINER_REGISTRY)
         dockerComposeFile: '**/docker-compose.yml'
         additionalDockerComposeFiles: 'docker-compose.override.yml'
-#        dockerComposeFileArgs: 'MVP_DOCKER_REGISTRY=mvpsitewh.azurecr.io'
         dockerComposeFileArgs: '$(DOCKER_COMPOSE_ARGS)'
         action: 'Push services'
         additionalImageTags: '$(Build.BuildNumber)-$(Build.SourceBranchName)'
@@ -94,72 +92,72 @@ stages:
             inputs:
               artifact: Sitecore.MVP-$(Build.BuildNumber)
               targetPath: '$(System.ArtifactsDirectory)'
-          - task: Kubernetes@1
-            displayName: Create MVP-Staging Namespace
-            inputs:
-              connectionType: 'Kubernetes Service Connection'
-              kubernetesServiceEndpoint: '$(AKS_SERVICE_ENDPOINT)'
-              command: 'apply'
-              useConfigurationFile: true
-              configuration: '$(System.ArtifactsDirectory)/k8s-specs/namespaces/namespace-staging.yaml'
-              secretType: 'dockerRegistry'
-              containerRegistryType: 'Azure Container Registry'
-              outputFormat: ''
-          - task: replacetokens@3
-            displayName: "Replace Tokens in Secrets & Specs"
-            inputs:
-              rootDirectory: '$(System.ArtifactsDirectory)/k8s-specs'
-              targetFiles: |
-                **/*.txt
-                **/*.crt
-                **/*.key
-                **/*.yaml
-              encoding: 'auto'
-              writeBOM: true
-              actionOnMissing: 'warn'
-              keepToken: true
-              tokenPrefix: '$('
-              tokenSuffix: ')'
-              useLegacyPattern: false
-              enableTelemetry: false
-          - task: KubernetesManifest@0
-            displayName: Bake K8s Secrets
-            name: 'bake'
-            inputs:
-              action: 'bake'
-              renderType: 'kustomize'
-              kustomizationPath: '$(System.ArtifactsDirectory)/k8s-specs/secrets/'
-          - task: KubernetesManifest@0
-            displayName: Deploy K8s Secrets
-            inputs:
-              action: 'deploy'
-              kubernetesServiceConnection: '$(AKS_SERVICE_ENDPOINT)'
-              namespace: 'mvp-staging'
-              manifests: '$(bake.manifestsBundle)'
-          - task: Kubernetes@1
-            displayName: Deploy External Specifications
-            inputs:
-              connectionType: 'Kubernetes Service Connection'
-              kubernetesServiceEndpoint: '$(AKS_SERVICE_ENDPOINT)'
-              namespace: 'mvp-staging'
-              command: 'apply'
-              useConfigurationFile: true
-              configuration: '$(System.ArtifactsDirectory)/k8s-specs/external'
-              secretType: 'dockerRegistry'
-              containerRegistryType: 'Azure Container Registry'
-              outputFormat: ''
-          - task: Kubernetes@1
-            displayName: Deploy Init Specifications
-            inputs:
-              connectionType: 'Kubernetes Service Connection'
-              kubernetesServiceEndpoint: '$(AKS_SERVICE_ENDPOINT)'
-              namespace: 'mvp-staging'
-              command: 'apply'
-              useConfigurationFile: true
-              configuration: '$(System.ArtifactsDirectory)/k8s-specs/init'
-              secretType: 'dockerRegistry'
-              containerRegistryType: 'Azure Container Registry'
-              outputFormat: ''
+#          - task: Kubernetes@1
+#            displayName: Create MVP-Staging Namespace
+#            inputs:
+#              connectionType: 'Kubernetes Service Connection'
+#              kubernetesServiceEndpoint: '$(AKS_SERVICE_ENDPOINT)'
+#              command: 'apply'
+#              useConfigurationFile: true
+#              configuration: '$(System.ArtifactsDirectory)/k8s-specs/namespaces/namespace-staging.yaml'
+#              secretType: 'dockerRegistry'
+#              containerRegistryType: 'Azure Container Registry'
+#              outputFormat: ''
+#          - task: replacetokens@3
+#            displayName: "Replace Tokens in Secrets & Specs"
+#            inputs:
+#              rootDirectory: '$(System.ArtifactsDirectory)/k8s-specs'
+#              targetFiles: |
+#                **/*.txt
+#                **/*.crt
+#                **/*.key
+#                **/*.yaml
+#              encoding: 'auto'
+#              writeBOM: true
+#              actionOnMissing: 'warn'
+#              keepToken: true
+#              tokenPrefix: '$('
+#              tokenSuffix: ')'
+#              useLegacyPattern: false
+#              enableTelemetry: false
+#          - task: KubernetesManifest@0
+#            displayName: Bake K8s Secrets
+#            name: 'bake'
+#            inputs:
+#              action: 'bake'
+#              renderType: 'kustomize'
+#              kustomizationPath: '$(System.ArtifactsDirectory)/k8s-specs/secrets/'
+#          - task: KubernetesManifest@0
+#            displayName: Deploy K8s Secrets
+#            inputs:
+#              action: 'deploy'
+#              kubernetesServiceConnection: '$(AKS_SERVICE_ENDPOINT)'
+#              namespace: 'mvp-staging'
+#              manifests: '$(bake.manifestsBundle)'
+#          - task: Kubernetes@1
+#            displayName: Deploy External Specifications
+#            inputs:
+#              connectionType: 'Kubernetes Service Connection'
+#             kubernetesServiceEndpoint: '$(AKS_SERVICE_ENDPOINT)'
+#              namespace: 'mvp-staging'
+#              command: 'apply'
+#              useConfigurationFile: true
+#              configuration: '$(System.ArtifactsDirectory)/k8s-specs/external'
+#              secretType: 'dockerRegistry'
+#              containerRegistryType: 'Azure Container Registry'
+#              outputFormat: ''
+#          - task: Kubernetes@1
+#            displayName: Deploy Init Specifications
+#            inputs:
+#              connectionType: 'Kubernetes Service Connection'
+#              kubernetesServiceEndpoint: '$(AKS_SERVICE_ENDPOINT)'
+#              namespace: 'mvp-staging'
+#              command: 'apply'
+#              useConfigurationFile: true
+#              configuration: '$(System.ArtifactsDirectory)/k8s-specs/init'
+#              secretType: 'dockerRegistry'
+#              containerRegistryType: 'Azure Container Registry'
+#              outputFormat: ''
           - task: Kubernetes@1
             displayName: Deploy Application Specifications
             inputs:
@@ -172,16 +170,16 @@ stages:
               secretType: 'dockerRegistry'
               containerRegistryType: 'Azure Container Registry'
               outputFormat: ''
-          - task: KubernetesManifest@0
-            displayName: Patch IP-Whitelist Values into Ingress
-            inputs:
-              action: 'patch'
-              kubernetesServiceConnection: '$(AKS_SERVICE_ENDPOINT)'
-              namespace: 'mvp-staging'
-              resourceToPatch: 'file'
-              resourceFileToPatch: '$(System.ArtifactsDirectory)/k8s-specs/ingress.yaml'
-              mergeStrategy: 'merge'
-              patch: '{"metadata": { "annotations": { "nginx.ingress.kubernetes.io/whitelist-source-range": "$(IP_WHITELIST)" }}}'
+#          - task: KubernetesManifest@0
+#            displayName: Patch IP-Whitelist Values into Ingress
+#            inputs:
+#              action: 'patch'
+#              kubernetesServiceConnection: '$(AKS_SERVICE_ENDPOINT)'
+#              namespace: 'mvp-staging'
+#              resourceToPatch: 'file'
+#              resourceFileToPatch: '$(System.ArtifactsDirectory)/k8s-specs/ingress.yaml'
+#              mergeStrategy: 'merge'
+#              patch: '{"metadata": { "annotations": { "nginx.ingress.kubernetes.io/whitelist-source-range": "$(IP_WHITELIST)" }}}'
           - task: Kubernetes@1
             displayName: Update SQL Image version
             inputs:
